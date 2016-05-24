@@ -3,7 +3,7 @@ import { Brewery } from './brewery.model';
 
 @Injectable()
 export class BreweryService {
-  BREWERIES: Brewery[] = [
+  _breweries: Brewery[] = [
     {
       id: 0,
       name: "Yards Brewing Company",
@@ -11,7 +11,36 @@ export class BreweryService {
       location: "Philadelphia, PA",
       website: "http://www.yardsbrewing.com/",
       img: "img/Yards.jpg",
-      beers: [],
+      beers: [
+        {
+          id: 0,
+          name: "IPA",
+          type: "India Pale Ale",
+          apv: 7.0,
+          ibu: 62
+        },
+        {
+          id: 1,
+          name: "Brawler",
+          type: "English Mild",
+          apv: 4.2,
+          ibu: 12
+        },
+        {
+          id: 2,
+          name: "Philadelphia Pale Ale",
+          type: "Pale Ale",
+          apv: 4.6,
+          ibu: 37
+        },
+        {
+          id: 3,
+          name: "Love Stout",
+          type: "English Stout",
+          apv: 5.5,
+          ibu: 20.5
+        }
+      ],
       about: "Back in the late '80s, two college buddies, Tom and Jon, decided to brew some beer for their friends. Whether it was natural talent or the endless supply of free beer, people liked what they tasted and wanted more. They didn’t know it at the time, but this was the beginning of what was to become Yards Brewing Company. From a garage in Manayunk, to Roxborough, then Kensington and finally to Northern Liberties, this is the Story of Yards, Philadelphia’s hometown brewery since 1994."
     },
     {
@@ -97,12 +126,12 @@ export class BreweryService {
 
   constructor() { }
 
-  getBreweries(): any {
-    return Promise.resolve(this.BREWERIES)
+  getBreweries(): Promise<Brewery[]> {
+    return Promise.resolve(this._breweries)
   }
 
-  getBrewery(id: number): any {
-    return Promise.resolve(this.BREWERIES)
+  getBrewery(id: number): Promise<Brewery> {
+    return Promise.resolve(this._breweries)
       .then(breweries => breweries.filter(brewery => brewery.id === id)[0]);
   }
 

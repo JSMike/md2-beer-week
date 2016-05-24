@@ -2,19 +2,18 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Md2BeerWeek</title>
+  <title>Philly Beer Week</title>
   <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="resources/mdIcons.css" rel="stylesheet">
 
   {{#unless environment.production}}
   <script src="/ember-cli-live-reload.js" type="text/javascript"></script>
   {{/unless}}
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
   <md2-beer-week-app>Loading...</md2-beer-week-app>
-
-  
 
     {{#each scripts.polyfills}}<script src="{{.}}"></script>{{/each}}
     <script>
@@ -22,10 +21,5 @@
         System.import('main');
       }).catch(console.error.bind(console));
     </script>
-
-  
-
-
-
 </body>
 </html>
