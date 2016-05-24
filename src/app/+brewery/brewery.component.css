@@ -1,0 +1,37 @@
+.secondary {
+    color: rgba(0, 0, 0, .8);
+}
+
+h1 {
+    color: #37474F;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 32px;
+    margin: 10px 16px 16px 16px;
+    opacity: .87;
+}
+
+h3 {
+    color: #37474F;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 10px 16px 16px 16px;
+    opacity: .7;
+}
+
+.item {
+    font-weight: 900;
+}
+
+.value {
+    color: rgba(0,0,0,.7)
+}
+
+.md-list-item {
+    height: 85px !important;
+}
+
+.md-list-item:hover {
+    background-color: rgba(0, 0, 0, .2);
+}
