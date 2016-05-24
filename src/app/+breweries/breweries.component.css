@@ -1,0 +1,20 @@
+h1 {
+    color: #37474F;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 32px;
+    margin: 10px 16px 16px 16px;
+    opacity: .87;
+}
+md-card {
+    width: 350px;
+    box-sizing: border-box;
+    margin: 16px;
+    height: 100%;
+}
+
+.card-container {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 20px auto;
+}

@@ -1,3 +1,16 @@
-<p>
-  breweries works!
-</p>
+<md-content>
+  <h1>Breweries participating in Philly Beer Week</h1>
+  <div class="card-container">
+    <md-card *ngFor="let brewery of breweries">
+      <div>
+        <img md-card-image [alt]="brewery.name" src="{{brewery.img}}">
+        <md-card-title>{{brewery.name}}</md-card-title>
+        <md-card-content class="secondary flex-fill">{{brewery.about}}</md-card-content>
+      </div>
+      <md-card-actions align="end">
+        <button md-button color="primary" (click)="viewBrewer(brewery.id)">View Beers</button>
+        <a href="{{brewery.website}}"><button md-button color="accent">View Website</button></a>
+      </md-card-actions>
+    </md-card>
+  </div>
+<md-content>
