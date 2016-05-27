@@ -4,6 +4,7 @@ import { Brewery } from '../shared/brewery.model';
 import { BreweryService } from '../shared/brewery.service';
 import { MD_LIST_DIRECTIVES } from '@angular2-material/list';
 import { MdIcon } from '@angular2-material/icon';
+import { MdToolbar } from '@angular2-material/toolbar';
 
 @Component({
   moduleId: module.id,
@@ -12,7 +13,9 @@ import { MdIcon } from '@angular2-material/icon';
   styleUrls: ['brewery.component.css'],
   directives: [
     MD_LIST_DIRECTIVES,
-    MdIcon
+    MdIcon,
+    MdToolbar
+
   ]
 })
 export class BreweryComponent implements OnActivate {

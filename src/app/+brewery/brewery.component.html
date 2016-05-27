@@ -1,12 +1,13 @@
 <h1>{{ brewery.name }}</h1>
-
 <h3>Beers:</h3>
 <md-list>
   <md-list-item *ngFor="let beer of brewery.beers">
     <md-icon md-list-avatar md-list-icon>local_drink</md-icon>
     <h3 md-line>{{beer.name}}</h3>
-    <p md-line><span class="item">Type: </span><span class="value">{{beer.type}}</span></p>
-    <p md-line><span class="item">APV: </span><span class="value">{{beer.apv}}%</span></p>
-    <p md-line><span class="item">IBU: </span><span class="value">{{beer.ibu}}</span></p>
+    <p md-line>
+      <span class="item">Type: </span><span class="value">{{beer.type}}</span>
+      <span class="item">APV: </span><span class="value">{{beer.apv}}%</span>
+      <span class="item">IBU: </span><span class="value">{{beer.ibu}}</span>
+    </p>
   </md-list-item>
 </md-list>

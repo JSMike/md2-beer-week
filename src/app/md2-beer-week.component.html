@@ -15,7 +15,7 @@
     </button>
     <button md-button (click)="goHome()"><span class="title">{{title}}</span></button>
   </md-toolbar>
-
-  <router-outlet></router-outlet>
-
+  <md-content>
+    <router-outlet></router-outlet>
+  </md-content>
 </md-sidenav-layout>

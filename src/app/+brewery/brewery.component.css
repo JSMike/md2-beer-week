@@ -28,10 +28,10 @@ h3 {
     color: rgba(0,0,0,.7)
 }
 
-.md-list-item {
-    height: 85px !important;
-}
-
 .md-list-item:hover {
     background-color: rgba(0, 0, 0, .2);
+}
+
+span.value {
+    padding-right: 10px;
 }
